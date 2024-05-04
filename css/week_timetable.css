@@ -1,0 +1,36 @@
+.days{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+.days.active_day{
+    background-color: #d6d6f6;
+}
+.dayname{
+    background-color: #8a8afb;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subject{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+.subject.active_hour{
+    color: white;
+    background-color: #a1a1a1;
+}
+@media screen and  (max-width: 600px)  {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+    }
+}

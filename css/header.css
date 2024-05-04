@@ -1,0 +1,98 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 20px 0 20px 0;
+}
+header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: lightblue solid;
+    border-width: 0 0 1px 0 ;
+
+}
+.header-logo{
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 0 30px;
+}
+.nav-a{
+    color: darkslategray;
+    text-decoration: none;
+    border: lightblue solid;
+    border-width: 0 0 0 0 ;
+    padding:5px;
+    margin: 0 30px 0 0;
+}
+.nav-a:hover{
+    transition: 0.2s ease-in;
+    border: 1px white solid;
+    border-radius: 5px;
+    color: white;
+    background-color: #5959ff;
+
+}
+p{
+    text-decoration: none;
+    color: black;
+    border: 1px lightblue solid;
+    width: 80%;
+    padding:20px;
+    align-self: center;
+    margin: 10px;
+}
+p a {
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    width: 100%;
+}
+@media screen and  (max-width: 600px)  {
+    header{
+        display: flex;
+        flex-direction: column;
+        overflow: unset;
+        height: fit-content;
+    }
+
+    .header-logo{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .header-nav{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .container{
+        height: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-a{
+        margin: 5px;
+        border: 1px lightgray solid;
+    }
+}
