@@ -2,17 +2,22 @@
 <html lang="fr">
 
 <body>
-    <header>
-        <div class="header-logo">
-            DEFITECH IT
-        </div>
 
-        <nav class="header-nav">
-            <a class="nav-a" href="../index.php">Acceuil</a>
-            <a class="nav-a" href="../directories/semester_list.php">Semestres</a>
-            <a class="nav-a" href="../week_timetable.php">Emploi du temps</a>
-            <a class="nav-a" href="../about_the_class.php">la classe</a>
-        </nav>
-    </header>
+<header>
+    <div class="top">
+        <a href="../index.php" class="logo">DEFITECH IT</a>
+        <div class="nav-button">
+            <img src="../images/header/compass.svg" alt="">
+        </div>
+    </div>
+    <div class="bottom">
+        <a class="nav-a" href="../directories/semester_list.php">Semestres</a>
+        <a class="nav-a" href="../week_timetable.php">Emploi du temps</a>
+        <a class="nav-a" href="../about_the_class.php">la classe</a>
+    </div>
+</header>
+
+<script src="../js/header.js" ></script>
+
 </body>
 </html>

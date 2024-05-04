@@ -4,8 +4,8 @@ require '../functions/time_table.php';
 require '../functions/get_path_to.php';
 require '../data/informations.php';
 require '../data/timetable.php';
-    $semester_list = get_semesters_list();
-    $title = 'Liste des semestres';
+$path = get_semesters_list();
+$title = 'Liste des semestres';
 ?>
 <!doctype html>
 <head>
@@ -22,13 +22,7 @@ require '../data/timetable.php';
     <body>
     <?php require '../elements/header.php'; ?>
     <div class="container">
-
-        <?php foreach ($semester_list as $semester): ?>
-            <?php $foldername = explode('/',$semester);
-            $foldername = $foldername[count($foldername)-1];
-            ?>
-            <p><a href="semester.php?semester=<?= $semester ?> "> <?= $foldername ?></a></p>
-        <?php endforeach; ?>
+        <?php show_folder_content($path,'directories/semester.php'); ?>
     </div>
     <?php require '../elements/footer.php'; ?>
     </body>

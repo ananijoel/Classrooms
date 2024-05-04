@@ -1,102 +1,169 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
 body{
-    width: 100vw;
-    height: 100vh;
-    overflow: auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    flex-direction: column;
+    height: 100vh;
+    background-color:   #ececec;
 }
-.container{
-    height: 100%;
+
+header {
+    transition: all 0.5s ease-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
     width: 100%;
-    justify-content: flex-start;
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-    padding: 20px 0 20px 0;
-}
-header{
-    width: 100%;
-    height: 50px;
+    height: 70px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0 2px 4px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border: lightblue solid;
-    border-width: 0 0 1px 0 ;
+    background-color: white;
 
 }
-.header-logo{
-    height: 100%;
-    justify-content: center;
-    align-items: center;
+.top{
     display: flex;
-    padding: 0 30px;
+
+}
+.logo{
+    text-decoration: none;
+    color: black;
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+
+}
+.nav-button{
+    display: none;
 }
 .nav-a{
-    color: darkslategray;
     text-decoration: none;
-    border: 0 lightblue solid;
-    padding:5px;
-    margin: 0 30px 0 0;
+    color: black;
+    padding: 10px;
+    margin: 0 5px;
+    border: grey solid;
+    border-width: 0 0 1px 0;
 }
 .nav-a:hover{
-    transition: 0.2s ease-in;
-    border: 1px white solid;
-    border-radius: 5px;
+    transition: all 0.5s ease;
+    border: black solid;
+    border-width: 0 0 1px 0;
     color: white;
-    background-color: #5959ff;
-
+    background-color: black;
 }
-p{
+
+.container{
+    z-index: 0;
     display: flex;
-    align-self: center;
-    text-decoration: none;
-    color: black;
-    border: 1px lightblue solid;
-    width: 50%;
-
-    margin: 10px;
-}
-p a {
-    text-decoration: none;
-    color: black;
-    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh ;
     width: 100%;
-    padding: 20px;
+    margin: 100px 0 80px 0;
+
 }
-@media screen and  (max-width: 600px)  {
+
+.items{
+    text-decoration: none;
+    color: black;
+}
+
+
+@media screen and  (max-width: 800px)  {
+
     header{
-        display: flex;
         flex-direction: column;
-        overflow: unset;
-        height: fit-content;
-    }
-
-    .header-logo{
-        font-size: 20px;
-        padding: 10px;
-    }
-
-    .header-nav{
-        display: flex;
         justify-content: flex-start;
-        flex-wrap: wrap;
-        padding: 10px;
     }
-    .container{
+    header.active{
+        height: 30%;
+        transition: all 0.5s ease-out;
+
+    }
+    .top{
+        height: 40px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        margin: 20px 0 0 0 ;
+    }
+    .nav-button{
+        display: block;
+    }
+    header .nav-button{
+        border: 0;
+        cursor: pointer;
+        animation: apparitionDeDroite 1s forwards;
+    }
+    header img {
+        height: 40px;
+        width: auto;
+    }
+    .bottom{
+        transition: all 0.5s ease-out;
+        display: none;
+    }
+    .bottom.active{
+        transition: all 0.5s ease-out;
         height: 100%;
-        justify-content: flex-start;
-        align-items: flex-start;
+        width: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px;
+        margin: 0 0 20px 0 ;
     }
     .nav-a{
-        margin: 5px;
-        border: 1px lightgray solid;
+        display: none;
     }
-    p{
-        width: 80%;
+    .nav-a.active{
+        transition: all 1s ease;
+        display: block;
+        text-decoration: none;
+        color: black;
+        border: #172554 solid;
+        padding: 10px 0;
+        margin: 10px 0;
+        width: 100%;
+        border-width: 0 0 1px 0;
+        text-align: center;
+    }
+    .bottom.active a:last-child{
+        border: 0;
+    }
+    .container{
+        z-index: 0;
+
+    }
+    .container.active{
+        transition: all 0.5s ease-out;
+        filter: blur(10px);
+    }
+    .containeractive{
+
+        transition: all 0.5s ease-out;
+        filter: blur(10px);
+    }
+    .semesesterChoice{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100vw;
+        overflow: auto;
+    }
+    .Semester_list{
+        width: 200px;
     }
 }

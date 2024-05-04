@@ -22,6 +22,15 @@ function get_project_name($absolute_path)
     return $b[count($b) - 1];
 }
 
+function show_folder_content($path,$target)
+{
+    foreach ($path as $item) {
+        $itemName = explode('/',$item);
+        $itemName = $itemName[count($itemName) - 1];
+        echo '<a class="items" href="'.$target.'?target='.$item.'">'.$itemName.'</a>';
+    }
+}
+
 /**
  * @param $absolute_path
  * @return mixed|string

@@ -5,18 +5,7 @@ require 'functions/get_path_to.php';
 require 'data/informations.php';
 require 'data/timetable.php';
 $path = get_semesters_list();
-global $time_table ;
-$today = $time_table[date('D')];
 $title = 'acceuil';
-
-global $timeTable ;
-$today = $timeTable[date('D')];
-$currentSemesterAbsolutePath = $path[1];
-$currentSemesterRelativePath = explode("/",$currentSemesterAbsolutePath);
-$currentSemesterRelativePath = $currentSemesterRelativePath[count($currentSemesterRelativePath)-1];
-$pastSemesterAbsolutePath = $path[0];
-$pastSemesterRelativePath = explode("/",$pastSemesterAbsolutePath);
-$pastSemesterRelativePath = $pastSemesterRelativePath[count($pastSemesterRelativePath)-1];
 ?>
 <!doctype html>
 <head>
@@ -32,14 +21,8 @@ $pastSemesterRelativePath = $pastSemesterRelativePath[count($pastSemesterRelativ
 <html lang="fr">
 <body>
 <?php require 'elements/header.php'; ?>
-
-<div class="semesters">
-    <a class="semester"  href="directories/semester.php?semester=<?=$pastSemesterAbsolutePath?>">
-    <?= $pastSemesterRelativePath ?>
-    </a>
-    <a class="semester"  href="directories/semester.php?semester=<?=$currentSemesterAbsolutePath?>">
-        <?= $currentSemesterRelativePath ?>
-    </a>
+<div class="container">
+    <?php show_folder_content($path,'directories/semester.php'); ?>
 </div>
 <?php require 'elements/footer.php'; ?>
 </body>

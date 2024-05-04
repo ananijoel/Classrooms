@@ -4,9 +4,10 @@ require '../functions/time_table.php';
 require '../functions/get_path_to.php';
 require '../data/informations.php';
 require '../data/timetable.php';
-$path = $_GET['semester'];
-$subjects  = get_directory_items($path);
-$title = get_folder_title($path)
+$paths = $_GET['target'];
+$path = get_directory_items($paths);
+$title = get_folder_title($paths);
+
 ?>
 <!doctype html>
 <head>
@@ -23,13 +24,7 @@ $title = get_folder_title($path)
     <body>
     <?php require '../elements/header.php'; ?>
    <div class="container">
-
-       <?php foreach ($subjects as $subject): ?>
-           <?php $foldername = explode('/',$subject);
-           $foldername = $foldername[count($foldername)-1];
-           ?>
-           <p><a href="subject.php?subject=<?= $subject ?>"><?= $foldername ?></a></p>
-       <?php endforeach; ?>
+       <?php show_folder_content($path,'');?>
    </div>
     <?php require '../elements/footer.php'; ?>
     </body>
