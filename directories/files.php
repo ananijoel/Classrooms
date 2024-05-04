@@ -28,7 +28,7 @@ $title = get_folder_title($path)
                 $relative_path = get_relative_path($file) ;
                 $file_info = pathinfo($relative_path);
                 ?>
-                <p><a href="<?= $relative_path ?>" download="<?= $file_info['basename'] ?>"><?= $file_info['filename'] ?></a></p>
+                <p><a href="<?= $relative_path ?>" download="<?= $file_info['basename'] ?>"><?= $file_info['basename'] ?></a></p>
                 <?php
             }
             ?>
