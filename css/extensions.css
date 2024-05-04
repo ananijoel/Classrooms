@@ -1,0 +1,104 @@
+/* Text Files */
+.txt{
+    background-color: rgba(100, 100, 100, 0.3); /* Grey */
+}
+
+/* PDF Files */
+.pdf{
+    background-color: #ff5733; /* Orange */
+    color: white;
+}
+
+/* Compressed Files (e.g., ZIP) */
+.zip{
+    background-color: rgba(50, 200, 50, 0.3); /* Light Green */
+}
+
+/* Directories */
+.dir{
+    background-color: rgba(255, 255, 0, 0.5); /* Yellow */
+}
+
+/* Image Files */
+.jpg, .jpeg, .png, .gif{
+    background-color: #f0e68c; /* Khaki */
+    color: black;
+}
+
+/* Document Files (e.g., DOC, DOCX) */
+.doc, .docx{
+    background-color: #6495ed; /* Cornflower Blue */
+    color: white;
+}
+
+/* Spreadsheet Files (e.g., XLS, XLSX) */
+.xls, .xlsx{
+    background-color: #4682b4; /* Steel Blue */
+    color: white;
+}
+
+/* Presentation Files (e.g., PPT, PPTX) */
+.ppt, .pptx{
+    background-color: #800080; /* Purple */
+    color: white;
+}
+
+/* Audio Files (e.g., MP3, WAV) */
+.mp3, .wav{
+    background-color: #ff6347; /* Tomato */
+    color: white;
+}
+
+/* Video Files (e.g., MP4, AVI) */
+.mp4, .avi{
+    background-color: #2e8b57; /* Sea Green */
+    color: white;
+}
+
+/* Executable Files (e.g., EXE, APK) */
+.exe, .apk{
+    background-color: #556b2f; /* Dark Olive Green */
+    color: white;
+}
+
+/* Archive Files (e.g., RAR, 7Z) */
+.rar{
+            background-color: #b22222; /* Fire Brick */
+            color: white;
+        }
+
+/* Font Files (e.g., TTF, OTF) */
+.ttf, .otf{
+    background-color: #808080; /* Gray */
+    color: white;
+}
+
+/* Code Files (e.g., HTML, CSS, JS) */
+.html, .css, .js{
+    background-color: #ffd700; /* Gold */
+    color: black;
+}
+
+/* Database Files (e.g., SQLite, SQL) */
+.sqlite, .sql{
+    background-color: #6a5acd; /* Slate Blue */
+    color: white;
+}
+
+/* Configuration Files (e.g., JSON, XML) */
+.json, .xml{
+    background-color: #20b2aa; /* Light Sea Green */
+    color: black;
+}
+
+/* Presentation Files (e.g., KEY, PPTX) */
+.key, .pptx{
+    background-color: #db7093; /* Pale Violet Red */
+    color: white;
+}
+
+/* Vector Image Files (e.g., SVG, EPS) */
+.svg, .eps{
+    background-color: #ff4500; /* Orange Red */
+    color: white;
+}

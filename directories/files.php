@@ -17,6 +17,7 @@ $title = get_folder_title($path)
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/extensions.css">
     <title><?= $title?$title: ''?> </title>
 </head>
 <html lang="fr">
@@ -27,8 +28,9 @@ $title = get_folder_title($path)
             foreach ($files as $file) {
                 $relative_path = get_relative_path($file) ;
                 $file_info = pathinfo($relative_path);
+                $extension = $file_info['extension'];
                 ?>
-                <p><a href="<?= $relative_path ?>" download="<?= $file_info['basename'] ?>"><?= $file_info['basename'] ?></a></p>
+                <p><a  class="<?= isset($extension)? $extension : 'dir' ?>" href="<?= $relative_path ?>" download="<?= $file_info['basename'] ?>"><?= $file_info['basename'] ?>  </a></p>
                 <?php
             }
             ?>

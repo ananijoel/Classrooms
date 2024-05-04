@@ -38,7 +38,6 @@ header{
     color: darkslategray;
     text-decoration: none;
     border: lightblue solid;
-    border-width: 0 0 0 0 ;
     padding:5px;
     margin: 0 30px 0 0;
 }
@@ -51,12 +50,13 @@ header{
 
 }
 p{
+    display: flex;
+    align-self: center;
     text-decoration: none;
     color: black;
     border: 1px lightblue solid;
-    width: 80%;
-    padding:20px;
-    align-self: center;
+    width: 50%;
+
     margin: 10px;
 }
 p a {
@@ -64,6 +64,7 @@ p a {
     color: black;
     height: 100%;
     width: 100%;
+    padding: 20px;
 }
 @media screen and  (max-width: 600px)  {
     header{
@@ -94,5 +95,8 @@ p a {
     .nav-a{
         margin: 5px;
         border: 1px lightgray solid;
+    }
+    p{
+        width: 80%;
     }
 }
