@@ -37,7 +37,7 @@ header{
 .nav-a{
     color: darkslategray;
     text-decoration: none;
-    border: lightblue solid;
+    border: 0 lightblue solid;
     padding:5px;
     margin: 0 30px 0 0;
 }
