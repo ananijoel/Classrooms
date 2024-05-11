@@ -18,6 +18,7 @@ $title = 'Liste des semestres';
     <link rel="stylesheet" href="../css/container.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/extensions.css">
+    <script src="../js/header.js" defer ></script>
     <title><?= $title?$title: ''?> </title>
 </head>
 <html lang="fr">
