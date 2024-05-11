@@ -25,10 +25,20 @@ function get_project_name($absolute_path)
 function show_folder_content($path,$target)
 {
     foreach ($path as $item) {
-        $itemName = explode('/',$item);
-        $itemName = $itemName[count($itemName) - 1];
-        echo '<a class="items" href="'.$target.'?target='.$item.'">'.$itemName.'</a>';
-    }
+        if (is_dir($item)) {
+            $itemName = explode('/',$item);
+            $itemName = $itemName[count($itemName) - 1];
+            echo '<a class="items" href="'.$target.'?target='.$item.'">'.$itemName.'</a>';
+
+        }
+        if (is_file($item)){
+            $relative_path = get_relative_path($item) ;
+            $file_info = pathinfo($relative_path);
+            $extension = $file_info['extension'];
+            echo '<a  class="'.$extension.'" href="'. $relative_path.'" download="'.$file_info['basename'].'">'.$file_info['basename'].' </a>';
+
+        }
+         }
 }
 
 /**
