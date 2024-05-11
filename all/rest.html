@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="semesesterChoice">
+        <?php foreach ($path as $semesters): ?>
+        <?php $foldername = explode('/',$semesters);
+            $foldername = $foldername[count($foldername)-1];
+            ?>
+        <p class="Semester_list" ><a  href="directories/subject.php?subject=<?= $semesters ?>"><?= $foldername ?></a></p>
+        <?php endforeach; ?>
+    </div>
+    <?php foreach ($subjects as $subject): ?>
+    <?php $foldername = explode('/',$subject);
+        $foldername = $foldername[count($foldername)-1];
+        ?>
+    <p><a class=""  href="directories/subject.php?subject=<?= $subject ?>"><?= $foldername ?></a></p>
+    <?php endforeach; ?>
+</div>
+</body>
+</html>
+
+
+$lastSemester = $path[count($path)-1];
+$subjects  = get_directory_items($lastSemester);
+global $time_table ;
+$today = $time_table[date('D')];
+
+
+global $timeTable ;
+$today = $timeTable[date('D')];
+$currentSemesterAbsolutePath = $path[1];
+$currentSemesterRelativePath = explode("/",$currentSemesterAbsolutePath);
+$currentSemesterRelativePath = $currentSemesterRelativePath[count($currentSemesterRelativePath)-1];
+$pastSemesterAbsolutePath = $path[0];
+$pastSemesterRelativePath = explode("/",$pastSemesterAbsolutePath);
+$pastSemesterRelativePath = $pastSemesterRelativePath[count($pastSemesterRelativePath)-1];
