@@ -15,7 +15,10 @@ $title = 'acceuil';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/container.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/extensions.css">
+    <script src="js/header.js" defer ></script>
     <title><?= $title?$title: ''?> </title>
 </head>
 <html lang="fr">

@@ -1,0 +1,28 @@
+p{
+
+    background-color: white;
+    margin: 10px;
+    width: 20%;
+    height: 120px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0 2px 4px;
+   display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+}
+p:hover{
+    transition: 0.2s ease-in;
+    width: 25%;
+    height: 130px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+@media screen and  (max-width: 800px) {
+    p{
+        width: 80%;
+    }
+    p:hover{
+        width: 85%;
+  }
+}

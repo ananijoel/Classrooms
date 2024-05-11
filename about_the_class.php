@@ -16,7 +16,11 @@ require 'data/timetable.php';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/container.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/extensions.css">
+    <script src="js/header.js" defer ></script>
+    <link rel="stylesheet" href="css/about_the_class.css">
     <title><?= $title?$title: ''?> </title>
 </head>
 <html lang="fr">

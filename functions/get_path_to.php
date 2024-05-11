@@ -28,14 +28,14 @@ function show_folder_content($path,$target)
         if (is_dir($item)) {
             $itemName = explode('/',$item);
             $itemName = $itemName[count($itemName) - 1];
-            echo '<a class="items" href="'.$target.'?target='.$item.'">'.$itemName.'</a>';
+            echo '<a class="items" href="'.$target.'?target='.$item.'"> <p class="name">'.$itemName.' </p> <p class="filetype dir"> dossier </p> </a>';
 
         }
         if (is_file($item)){
             $relative_path = get_relative_path($item) ;
             $file_info = pathinfo($relative_path);
             $extension = $file_info['extension'];
-            echo '<a  class="'.$extension.'" href="'. $relative_path.'" download="'.$file_info['basename'].'">'.$file_info['basename'].' </a>';
+            echo '<a  class="items" href="'. $relative_path.'" download="'.$file_info['basename'].'"> <p class="name">'.$file_info['filename'].' </p> <p class="filetype '.$extension.' " > '.$extension.' </p>  </a>';
 
         }
          }
