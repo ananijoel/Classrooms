@@ -5,7 +5,7 @@
 
 /* PDF Files */
 .pdf{
-    background-color: #e74c3c; /* Orange */
+    background-color: #ff5733; /* Orange */
     color: white;
 }
 
@@ -16,7 +16,7 @@
 
 /* Directories */
 .dir{
-    background-color: #ffdd4f; /* Yellow */
+    background-color: rgba(255, 255, 0, 0.5); /* Yellow */
 }
 
 /* Image Files */
