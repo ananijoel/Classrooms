@@ -23,3 +23,9 @@ $firstfileRePath = get_relative_path($firstfile);
 //echo $firstfileRePath;
 //show_folder_content($courses,'');
 //var_dump(pathinfo($courses));
+function backbutton($path)
+{
+    $path = pathinfo($path,PATHINFO_DIRNAME);
+    echo $path;
+}
+backbutton($courses);

@@ -93,3 +93,27 @@ function upload($semesters,$subject,$category)
 {
 
 }
+function backbutton($path)
+{
+    if(isset($path)){
+        if(is_array($path)){
+            $return = "#";
+        }else{
+
+
+            if($path !== "/media/anani/Code base/Defitech-IT/Semesters"){
+                $path = pathinfo($path,PATHINFO_DIRNAME);
+                $return = '../directories/fileExplorer.php?target='.$path;
+            }
+            else{
+                $return = "#";
+            }
+        }
+    }
+    else{
+        $return = '../index.php';
+    }
+   return $return;
+
+
+}

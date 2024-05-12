@@ -1,5 +1,5 @@
 <footer>
     <div class="header-page-indicator">
-        <?= $title?$title: ''?>
+        <a href="<?= backbutton($path)?>"> <?= $title?$title: ''?> </a>
     </div>
 </footer>
