@@ -7,6 +7,7 @@ require '../data/timetable.php';
 $paths = $_GET['target'];
 $path = get_directory_items($paths);
 $title = get_folder_title($paths);
+$i = 0;
 
 ?>
 <!doctype html>
