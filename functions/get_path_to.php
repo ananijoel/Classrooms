@@ -38,7 +38,7 @@ function get_relative_path($path){
 }
 
 /**
- * @param $path path of the folder you want to get the name
+ * @param $path string of the folder you want to get the name
  * @return mixed|string the name of the folder
  */
 function get_folder_title($path)
