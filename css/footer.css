@@ -12,8 +12,14 @@ footer{
     z-index: 10;
     box-shadow: rgba(0, 0, 0, 0.18) 0 2px 4px;
     background-color: white;
+    text-decoration: none;
+    color: black;
 }
 a{
+    text-decoration: none;
+    color: black;
+}
+.backbutton{
     text-decoration: none;
     color: black;
 }
