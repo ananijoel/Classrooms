@@ -25,7 +25,7 @@ $title = 'Liste des semestres';
     <body>
     <?php require '../elements/header.php'; ?>
     <div class="container">
-        <?php show_folder_content($path,'semester.php'); ?>
+        <?php show_folder_content($path,'fileExplorer.php'); ?>
     </div>
     <?php require '../elements/footer.php'; ?>
     </body>

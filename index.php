@@ -25,7 +25,7 @@ $title = 'acceuil';
 <body>
 <?php require 'elements/header.php'; ?>
 <div class="container">
-    <?php show_folder_content($path,'directories/semester.php'); ?>
+    <?php show_folder_content($path,'directories/fileExplorer.php'); ?>
 </div>
 <?php require 'elements/footer.php'; ?>
 </body>

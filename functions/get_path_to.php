@@ -43,6 +43,7 @@ function get_relative_path($path){
  */
 function get_folder_title($path)
 {
+    $i = 0;
     $a = explode('/',$path);
     if(is_dir($path)){
         $i = 1;
@@ -54,7 +55,7 @@ function get_folder_title($path)
 }
 
 /**
- * @param $paths Array all the items you want to display
+ * @param $path Array|string all the items you want to display
  * @param $target string the page you want to be redirected if the user clicked on an item
  * @return void display with html all the items
  */
@@ -68,17 +69,27 @@ function show_folder_content($path,$target)
     }
     foreach ($paths as $item) {
         if (is_dir($item)) {
-            $itemName = explode('/',$item);
-            $itemName = $itemName[count($itemName) - 1];
-            echo '<a class="items" href="'.$target.'?target='.$item.'"> <p class="name">'.$itemName.' </p> <p class="filetype dir"> dossier </p> </a>';
+            $name = pathinfo($item,PATHINFO_BASENAME);
+            echo '<a class="items" href="'.$target.'?target='.$item.'"> <p class="name">'.$name.' </p> <p class="filetype dir"> dossier </p> </a>';
 
         }
         if (is_file($item)){
-            $relative_path = get_relative_path($item) ;
-            $file_info = pathinfo($relative_path);
+            $itemRelativePath = get_relative_path($item) ;
+            $file_info = pathinfo($itemRelativePath);
             $extension = $file_info['extension'];
-            echo '<a  class="items" href="'. $relative_path.'" download="'.$file_info['basename'].'"> <p class="name">'.$file_info['filename'].' </p> <p class="filetype '.$extension.' " > '.$extension.' </p>  </a>';
+            echo '<a  class="items" href="'. $itemRelativePath.'" download="'.$file_info['basename'].'"> <p class="name">'.$file_info['filename'].' </p> <p class="filetype '.$extension.' " > '.$extension.' </p>  </a>';
 
         }
     }
+}
+
+/**
+ * @param $semesters String the semester of the file
+ * @param $subject String the subject of the file
+ * @param $category String the category of the file
+ * @return void
+ */
+function upload($semesters,$subject,$category)
+{
+
 }
