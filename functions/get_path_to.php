@@ -58,8 +58,14 @@ function get_folder_title($path)
  * @param $target string the page you want to be redirected if the user clicked on an item
  * @return void display with html all the items
  */
-function show_folder_content($paths,$target)
+function show_folder_content($path,$target)
 {
+    if(is_array($path)) {
+        $paths = $path;
+    }
+    else{
+        $paths = get_directory_items($path);
+    }
     foreach ($paths as $item) {
         if (is_dir($item)) {
             $itemName = explode('/',$item);

@@ -4,11 +4,8 @@ require '../functions/time_table.php';
 require '../functions/get_path_to.php';
 require '../data/informations.php';
 require '../data/timetable.php';
-$paths = $_GET['target'];
-$path = get_directory_items($paths);
-$title = get_folder_title($paths);
-$i = 0;
-
+$path = $_GET['target'];
+$title = get_folder_title($path);
 ?>
 <!doctype html>
 <head>
