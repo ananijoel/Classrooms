@@ -1,8 +1,18 @@
+.box{
+    height: fit-content;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Définit 4 colonnes de largeur égale */
+    grid-gap: 15px;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-area: 2 / 2 / 4 / 4;
+}
 p{
 
     background-color: white;
     margin: 10px;
-    width: 20%;
+    width: 300px;
     height: 120px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.18) 0 2px 4px;
@@ -11,22 +21,48 @@ p{
     align-items: center;
     padding: 10px;
 }
-/*
-p:hover{
-    transition: 0.2s ease-in;
-    width: 25%;
-    height: 130px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
- */
 
 @media screen and  (max-width: 800px) {
     p{
         width: 80%;
     }
-/*
-    p:hover{
-        width: 85%;
-  }
- */
+
+}
+@media (pointer: coarse) and (orientation: portrait) and (max-width: 700px){
+    .box{
+        grid-template-columns: repeat(1, 1fr); /* Définit 4 colonnes de largeur égale */
+        width: 100%;
+        height: 100%;
+        padding: 50% 0 30% 0;
+        overflow: auto;
+    }
+    p{
+        justify-self: center;
+        width: 80%;
+    }
+}
+@media (max-width: 1000px){
+    .box{
+        grid-template-columns: repeat(3, 1fr); /* Définit 4 colonnes de largeur égale */
+    }
+
+}
+@media (max-width: 800px){
+    .box{
+        grid-template-columns: repeat(2, 1fr); /* Définit 4 colonnes de largeur égale */
+    }
+
+}
+@media (max-width: 650px){
+    .box{
+        grid-template-columns: repeat(1, 1fr); /* Définit 4 colonnes de largeur égale */
+        width: 100%;
+        height: 100%;
+        padding: 50% 0 30% 0;
+        overflow: auto;
+    }
+    p{
+        justify-self: center;
+        width: 80%;
+    }
 }

@@ -4,6 +4,7 @@ require '../functions/time_table.php';
 require '../functions/get_path_to.php';
 require '../data/informations.php';
 require '../data/timetable.php';
+require '../functions/metadata.php';
 $path = get_semesters_list();
 $title = 'Liste des semestres';
 ?>
@@ -25,7 +26,9 @@ $title = 'Liste des semestres';
     <body>
     <?php require '../elements/header.php'; ?>
     <div class="container">
-        <?php show_folder_content($path,'fileExplorer.php'); ?>
+        <div class="box">
+            <?php show_folder_content($path,'fileExplorer.php'); ?>
+        </div>
     </div>
     <?php require '../elements/footer.php'; ?>
     </body>

@@ -1,5 +1,6 @@
 <?php
 require '../functions/get_path_to.php';
+require '../functions/metadata.php';
 
 $semesterList = get_semesters_list();
 //var_dump($semesterList);
@@ -23,9 +24,16 @@ $firstfileRePath = get_relative_path($firstfile);
 //echo $firstfileRePath;
 //show_folder_content($courses,'');
 //var_dump(pathinfo($courses));
+/*
 function backbutton($path)
 {
     $path = pathinfo($path,PATHINFO_DIRNAME);
     echo $path;
 }
-backbutton($courses);
+backbutton($courses);*/
+//$filename = pathinfo("/home/anani/pomvwamwvmwmvmvrarvvsvdsvssdsvvdvsvsd.md", PATHINFO_BASENAME);
+//echo "\n".$filename;
+//echo "\n ".file_size($firstfile);
+//echo "\n ".creation_date($firstfile);
+//echo  "\n".filename_limiter($filename);
+folder_items($firstSemester);

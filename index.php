@@ -4,6 +4,7 @@ require 'functions/time_table.php';
 require 'functions/get_path_to.php';
 require 'data/informations.php';
 require 'data/timetable.php';
+require 'functions/metadata.php';
 $path = get_semesters_list();
 $title = 'acceuil';
 ?>
@@ -25,7 +26,9 @@ $title = 'acceuil';
 <body>
 <?php require 'elements/header.php'; ?>
 <div class="container">
-    <?php show_folder_content($path,'directories/fileExplorer.php'); ?>
+    <div class="box">
+        <?php show_folder_content($path,'directories/fileExplorer.php'); ?>
+    </div>
 </div>
 <?php require 'elements/footer.php'; ?>
 </body>

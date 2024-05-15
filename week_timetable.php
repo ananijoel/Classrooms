@@ -28,7 +28,9 @@ $title = ' Emploi du temps';
     <?php require 'elements/header.php'; ?>
     <body>
         <div class="container">
-            <?php week_timetable($time_table, $days_name); ?>
+           <div class="box">
+               <?php week_timetable($time_table, $days_name); ?>
+           </div>
         </div>
     </body>
     <?php require 'elements/footer.php'; ?>

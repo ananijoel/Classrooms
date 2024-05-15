@@ -1,76 +1,113 @@
 
 .container{
-    padding: 70px 0 50px 0;
+    width: 100%;
     height: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: start;
+    justify-content: center;
+    align-items: center;
 
 }
-
+.box{
+    height: fit-content;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Définit 4 colonnes de largeur égale */
+    grid-gap: 15px;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-area: 2 / 2 / 4 / 4;
+}
 .items{
-    background-color: white;
+    display: block;
+    background-color: #ffffff;
+    width: 255px;
+    height: 210px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     text-decoration: none;
     color: black;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.18) 0 2px 4px;
-    width: 400px;
-    height: 150px;
-    margin: 10px ;
-    padding: 10px 20px 10px 10px;
+    border-radius: 5px;
+}
+.icon{
+    height: 130px;
+    width: 100%;
+    padding: 10px 15px;
+    border: #ebebeb solid;
+    border-width: 0 0 1px 0;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-
-}
-/*
-.items:hover{
-    transition: 0.2s ease-in;
-    width: 410px;
-    height: 160px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
- */
-.name{
-    margin: 10px;
-}
-.filetype{
-    text-wrap: wrap;
-    display: flex;
-    height: 20px;
-    width: 70px;
-    font-size: 12px;
-    border-radius:  10px;
-    padding: 10px;
-    text-align: center;
     justify-content: center;
     align-items: center;
 }
-@media screen and  (max-width: 800px) {
-    body{
+img{
+    height: 100%;
+    width: auto;
+}
+.fileinfo{
+    height: 80px;
+    width: 100% ;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.filename{
+    color: #6c757d !important;
+}
+.metadata{
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.filesize{
+    color: #007bff;
+    height: 100%;
+    width: fit-content;
+    font-size: 80%;
+}
+.filedate{
+    color: #6c757d !important;
+    height: 100%;
+    width: fit-content;
+    font-size: 80%;
+}
+@media (pointer: coarse) and (orientation: portrait) and (max-width: 700px){
+    .box{
+        grid-template-columns: repeat(1, 1fr); /* Définit 4 colonnes de largeur égale */
+        width: 100%;
+        height: 100%;
+        padding: 50% 0 30% 0;
         overflow: auto;
-    }
-    .container {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        overflow: auto;
-        justify-content: flex-start;
-        align-content: center;
-        align-items: center;
-        padding: 80px 0 50px 0;
-    }
-    .container.active{
-        filter: blur(10px);
-        backdrop-filter: blur(10px);
     }
     .items{
-        flex-shrink: 0;
-        width: 90%;
-        height: 120px;
+        justify-self: center;
+        width: 80%;
+    }
+}
+@media (max-width: 1000px){
+    .box{
+        grid-template-columns: repeat(3, 1fr); /* Définit 4 colonnes de largeur égale */
+    }
 
+}
+@media (max-width: 800px){
+    .box{
+        grid-template-columns: repeat(2, 1fr); /* Définit 4 colonnes de largeur égale */
+    }
+
+}
+@media (max-width: 650px){
+    .box{
+        grid-template-columns: repeat(1, 1fr); /* Définit 4 colonnes de largeur égale */
+        width: 100%;
+        height: 100%;
+        padding: 50% 0 30% 0;
+        overflow: auto;
+    }
+    .items{
+        justify-self: center;
+        width: 80%;
     }
 }

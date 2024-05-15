@@ -4,6 +4,7 @@ require '../functions/time_table.php';
 require '../functions/get_path_to.php';
 require '../data/informations.php';
 require '../data/timetable.php';
+require '../functions/metadata.php';
 $path = $_GET['target'];
 $title = get_folder_title($path);
 ?>
@@ -25,7 +26,9 @@ $title = get_folder_title($path);
     <body>
     <?php require '../elements/header.php'; ?>
    <div class="container">
-       <?php show_folder_content($path,'');?>
+       <div class="box">
+           <?php show_folder_content($path,'');?>
+       </div>
    </div>
     <?php require '../elements/footer.php'; ?>
     </body>

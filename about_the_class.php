@@ -27,18 +27,20 @@ require 'data/timetable.php';
     <?php require 'elements/header.php'; ?>
     <body>
         <div class="container">
-            <p class="days SchoolStarted">
-                Jours ecoulés depuis la rentree de ce semestre : <?= $counter_after_school_started[0]?>
-            </p>
-            <p class="weeks SchoolStarted">
-                Semaines ecoulées depuis la rentree de ce semestre : <?= $counter_after_school_started[1]?>
-            </p>
-            <p class="days SchoolEnd">
-               Jours restants avant la fin du semestre : <?= $counter_before_holidays[0] ?>
-            </p>
-            <p class="weeks SchoolEnd">
-                Semaines restantes avant la fin du semestre : <?= $counter_before_holidays[1] ?>
-            </p>
+            <div class="box">
+                <p class="days SchoolStarted">
+                    Jours ecoulés depuis la rentree de ce semestre : <?= $counter_after_school_started[0]?>
+                </p>
+                <p class="weeks SchoolStarted">
+                    Semaines ecoulées depuis la rentree de ce semestre : <?= $counter_after_school_started[1]?>
+                </p>
+                <p class="days SchoolEnd">
+                    Jours restants avant la fin du semestre : <?= $counter_before_holidays[0] ?>
+                </p>
+                <p class="weeks SchoolEnd">
+                    Semaines restantes avant la fin du semestre : <?= $counter_before_holidays[1] ?>
+                </p>
+            </div>
         </div>
         <?php require 'elements/footer.php'; ?>
     </body>
