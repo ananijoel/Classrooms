@@ -24,7 +24,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }else{
             echo '<div class="uploadstate succes">le dossier de telechargement n\'existe pas.</div>';
-            mkdir("upload/");
+            mkdir("upload/",777);
 
         }
     }
