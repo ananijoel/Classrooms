@@ -46,7 +46,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/upload.css">
     <script src="js/header.js" defer ></script>
-    <title><?= $title ?>></title>
+    <title><?= $title ?></title>
 </head>
 <body>
     <?php require 'elements/header.php'; ?>
