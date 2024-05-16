@@ -2,25 +2,25 @@
 require '../functions/get_path_to.php';
 require '../functions/metadata.php';
 
-$semesterList = get_semesters_list();
+//$semesterList = get_semesters_list();
 //var_dump($semesterList);
-$firstSemester = $semesterList[0];
+//$firstSemester = $semesterList[0];
 //echo $firstSemester;
-$firstSemesterItems = get_directory_items($firstSemester);
+//$firstSemesterItems = get_directory_items($firstSemester);
 //var_dump($firstSemesterItems);
-$firstSubject = $firstSemesterItems[0];
+//$firstSubject = $firstSemesterItems[0];
 //echo $firstSubject;
-$firstSubjectItems = get_directory_items($firstSubject);
+//$firstSubjectItems = get_directory_items($firstSubject);
 //var_dump($firstSubjectItems);
-$courses = $firstSubjectItems[0];
+//$courses = $firstSubjectItems[0];
 //echo $courses;
-$coursesItems = get_directory_items($courses);
+//$coursesItems = get_directory_items($courses);
 //var_dump($coursesItems);
-$firstfile = $coursesItems[0];
+//$firstfile = $coursesItems[0];
 //echo $firstfile;
-$currentFolderName = get_folder_title($firstfile);
+//$currentFolderName = get_folder_title($firstfile);
 //echo $currentFolderName;
-$firstfileRePath = get_relative_path($firstfile);
+//$firstfileRePath = get_relative_path($firstfile);
 //echo $firstfileRePath;
 //show_folder_content($courses,'');
 //var_dump(pathinfo($courses));
@@ -37,4 +37,13 @@ backbutton($courses);*/
 //echo "\n ".creation_date($firstfile);
 //echo  "\n".filename_limiter($filename);
 //folder_items($firstSemester);
-echo file_exists("../upload");
+//echo file_exists("../upload"); 
+
+
+function get_projec_name()
+{
+    $path = dirname(dirname(__FILE__));
+    $b = explode('/', $path);
+    return $b[count($b) - 1];
+}
+echo get_projec_name();

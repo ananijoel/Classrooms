@@ -5,7 +5,7 @@ require 'functions/get_path_to.php';
 require 'data/informations.php';
 require 'data/timetable.php';
 require 'functions/metadata.php';
-$path = get_semesters_list();
+$path = dirname(__FILE__).DIRECTORY_SEPARATOR.'upload';
 $title = 'Historique des uploads';
 ?>
 <!doctype html>
@@ -27,7 +27,7 @@ $title = 'Historique des uploads';
 <?php require 'elements/header.php'; ?>
 <div class="container">
     <div class="box">
-    <?php show_folder_content('upload/',''); ?>
+    <?php show_folder_content($path,''); ?>
     </div>
 </div>
 <?php require 'elements/footer.php'; ?>

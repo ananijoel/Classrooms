@@ -21,10 +21,10 @@ function get_directory_items($path)
  * @param $path string path to the current project where you are
  * @return mixed|string the name of the project
  */
-function get_project_name($path)
+function get_project_name()
 {
-    $a = explode('/Semesters', $path);
-    $b = explode('/', $a[0]);
+    $path = dirname(dirname(__FILE__));
+    $b = explode('/', $path);
     return $b[count($b) - 1];
 }
 
@@ -33,7 +33,7 @@ function get_project_name($path)
  * @return mixed|string the relative pat(from the project )to the directory or file
  */
 function get_relative_path($path){
-    $project_name = get_project_name($path);
+    $project_name = get_project_name();
     return explode("$project_name", $path)[1];
 }
 
@@ -85,11 +85,16 @@ function show_folder_content($path,$target)
         }
         if (is_file($item)){
             $itemRelativePath = get_relative_path($item) ;
-            $file_info = pathinfo($itemRelativePath);
-            $extension = $file_info['extension'];
-            echo '<a  class="items" href="'. $itemRelativePath.'" download="'.$file_info['basename'].'" >
+            //$file_info = pathinfo($itemRelativePath);
+            //$extension = $file_info['extension'];
+            //echo pathinfo($item, PATHINFO_EXTENSION);
+            //echo strlen($itemRelativePath);
+            //echo $item;
+            //echo strlen($itemRelativePath);
+            
+            echo '<a  class="items" href="'. $itemRelativePath.'" download="'.pathinfo($item, PATHINFO_BASENAME).'" >
                         <div class="icon">
-                            <img src="../images/extensions/'.$extension.'.svg" alt="">
+                            <img src="../images/extensions/'.pathinfo($item, PATHINFO_EXTENSION).'.svg" alt="">
                         </div>
                         <div class="fileinfo">
                             <p class="filename">'.filename_limiter($item).'</p>
