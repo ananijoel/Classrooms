@@ -36,4 +36,5 @@ backbutton($courses);*/
 //echo "\n ".file_size($firstfile);
 //echo "\n ".creation_date($firstfile);
 //echo  "\n".filename_limiter($filename);
-folder_items($firstSemester);
+//folder_items($firstSemester);
+echo file_exists("../upload");

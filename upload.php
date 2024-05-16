@@ -15,11 +15,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $filetype = $_FILES["file"]["type"];
         $filesize = $_FILES["file"]["size"];
         // Vérifie si le fichier existe avant de le télécharger.
-        if (file_exists("upload/" . $_FILES["file"]["name"])) {
-            echo '<div class="uploadstate halfFail">'.$_FILES["file"]["name"].' existe deja</div>';
-        } else {
-            move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" . $_FILES["file"]["name"]);
-            echo '<div class="uploadstate succes">Votre fichier a été téléchargé avec succès.</div>';
+        if(file_exists("upload/")){
+            if (file_exists("upload/" . $_FILES["file"]["name"])) {
+                echo '<div class="uploadstate halfFail">'.$_FILES["file"]["name"].' existe deja</div>';
+            } else {
+                move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" . $_FILES["file"]["name"]);
+                echo '<div class="uploadstate succes">Votre fichier a été téléchargé avec succès.</div>';
+            }
+        }else{
+            echo '<div class="uploadstate succes">le dossier de telechargement n\'existe pas.</div>';
+
         }
     }
 
