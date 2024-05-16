@@ -87,7 +87,6 @@ function show_folder_content($path,$target)
             $itemRelativePath = get_relative_path($item) ;
             $file_info = pathinfo($itemRelativePath);
             $extension = $file_info['extension'];
-
             echo '<a  class="items" href="'. $itemRelativePath.'" download="'.$file_info['basename'].'" >
                         <div class="icon">
                             <img src="../images/extensions/'.$extension.'.svg" alt="">
