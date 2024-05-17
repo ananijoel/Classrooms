@@ -5,16 +5,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    min-height: 100vh;
+    max-height: 100vh;
+    padding: 70px 0 ;
 }
 .box{
-    height: fit-content;
+    height: 100%;
     width: fit-content;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Définit 4 colonnes de largeur égale */
     grid-gap: 15px;
     align-items: center;
     justify-content: space-evenly;
+    max-height: 100vh;
+    padding: 70px 0;
+    overflow: auto;
+    scrollbar-color: #007bff #cfe8fd;
+    scrollbar-width: thin ;
+    padding: 10px 20px;
+    /*padding: 30% 0 20% 0;*/
+
+    
+
 
 }
 .items{
@@ -78,8 +90,10 @@ img{
         grid-template-columns: repeat(1, 1fr); /* Définit 4 colonnes de largeur égale */
         width: 100%;
         height: 100%;
-        padding: 50% 0 30% 0;
+        /*padding: 30% 0 20% 0;*/
         overflow: auto;
+        height: 100%;
+        padding: 70px 0;
     }
     .items{
         justify-self: center;
@@ -103,8 +117,7 @@ img{
         grid-template-columns: repeat(1, 1fr); /* Définit 4 colonnes de largeur égale */
         width: 100%;
         height: 100%;
-        padding: 50% 0 30% 0;
-        overflow: auto;
+        
     }
     .items{
         justify-self: center;
