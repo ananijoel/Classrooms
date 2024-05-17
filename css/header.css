@@ -18,7 +18,7 @@ body{
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 header {
@@ -56,18 +56,18 @@ header {
 }
 .nav-a{
     text-decoration: none;
-    color: black;
+    color: #575757;
     padding: 10px;
     margin: 0 5px;
-    border: grey solid;
-    border-width: 0 0 1px 0;
+
 }
 .nav-a:hover{
     transition: all 0.5s ease;
-    border: black solid;
+    border: #007bff solid;
     border-width: 0 0 1px 0;
     color: white;
-    background-color: black;
+    background-color: #007bff;
+    border-radius: 10px;
 }
 
 
@@ -80,7 +80,7 @@ header {
     }
     header.active{
         height: 50%;
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        box-shadow: rgba(0, 0, 0, 0.18) 0 2px 4px;
         transition: all 0.5s ease-out;
 
     }

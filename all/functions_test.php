@@ -39,7 +39,7 @@ backbutton($courses);*/
 //folder_items($firstSemester);
 //echo file_exists("../upload"); 
 
-
+/*
 function get_projec_name()
 {
     $path = dirname(dirname(__FILE__));
@@ -47,3 +47,5 @@ function get_projec_name()
     return $b[count($b) - 1];
 }
 echo get_projec_name();
+*/
+phpinfo();

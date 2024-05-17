@@ -15,7 +15,7 @@
     grid-gap: 15px;
     align-items: center;
     justify-content: space-evenly;
-    grid-area: 2 / 2 / 4 / 4;
+
 }
 .items{
     display: block;
