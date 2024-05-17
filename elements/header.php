@@ -5,7 +5,7 @@
 
 <header>
     <div class="top">
-        <a href="../index.php" class="logo">DEFITECH classrooms</a>
+        <a href="../index.php" class="logo">DEFITECH CLASSROOMS</a>
         <div class="nav-button">
             <img src="../images/header/compass.svg" alt="">
         </div>
