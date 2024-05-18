@@ -9,6 +9,9 @@
     max-height: 100vh;
     padding: 70px 0 ;
 }
+.container.active{
+    filter: blur(10px);
+}
 .box{
     height: 100%;
     width: fit-content;
