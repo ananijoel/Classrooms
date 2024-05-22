@@ -6,8 +6,9 @@ Classrooms est une application permettant de télécharger les cours, travaux di
 ## Installation
 Pour tester le code, suivez ces étapes :
 
-1. Pour uploader des fichiers, saisissez directement dans la barre de recherche après l'adresse du site (`localhost:8000`) : `/upload.php`.
-2. Pour visualiser l'historique des uploads, accédez à : `uploads_history.php`.
+1. Lancez le fichier `Database.bash` disponible à la racine du projet pour configurer la base de données.
+2. Pour uploader des fichiers, saisissez directement dans la barre de recherche après l'adresse du site (`localhost:8000`) : `/upload.php`.
+3. Pour visualiser l'historique des uploads, accédez à : `uploads_history.php`.
 
 ## Utilisation
 Pour utiliser l'application, assurez-vous d'avoir lancé l'environnement de développement (le serveur PHP)
