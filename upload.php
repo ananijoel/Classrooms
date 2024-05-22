@@ -7,7 +7,7 @@ require 'data/timetable.php';
 require 'functions/metadata.php';
 //$path = get_semesters_list();
 $title = 'upload';
-
+$message;
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     // Vérifie si le fichier a été uploadé sans erreur.
     if (isset($_FILES["file"]) && $_FILES["file"]["error"] == 0) {
@@ -17,13 +17,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         // Vérifie si le fichier existe avant de le télécharger.
         if(file_exists("upload/")){
             if (file_exists("upload/" . $_FILES["file"]["name"])) {
-                echo '<div class="uploadstate halfFail">'.$_FILES["file"]["name"].' existe deja</div>';
+                $message =  '<div class="uploadstate halfFail">'.$_FILES["file"]["name"].' existe deja</div>';
             } else {
                 move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" . $_FILES["file"]["name"]);
-                echo '<div class="uploadstate succes">Votre fichier a été téléchargé avec succès.</div>';
+                $message =  '<div class="uploadstate succes">Votre fichier a été téléchargé avec succès.</div>';
             }
         }else{
-            echo '<div class="uploadstate succes">le dossier de telechargement n\'existe pas.</div>';
+            $message =  '<div class="uploadstate succes">le dossier de telechargement n\'existe pas.</div>';
             mkdir("upload/",777);
 
         }
@@ -51,6 +51,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <?php require 'elements/header.php'; ?>
     <div class="container">
+        <?= $message ?>
         <form action="upload.php" method="post" enctype="multipart/form-data">
             <input type="file" name="file">
             <input type="submit" name="submit" value="Upload">
