@@ -1,7 +1,7 @@
 <?php
 function zipper($source, $destination)
 {
-    shell_exec('sudo apt install php-zip');
+    //shell_exec('sudo apt install php-zip');
     $zip = new ZipArchive();
     $zip->open($destination, ZipArchive::CREATE);
     $source = realpath($source);
@@ -21,6 +21,9 @@ function zipper($source, $destination)
 }
 
 $sourceDir = '/home/anani/gitlearning';  // Chemin absolu vers le dossier à compresser
-$zipFile = $sourceDir . '.zip';  // Fichier ZIP dans le même répertoire que le dossier
-
+$zipFile = '/media/anani/Code base/Classrooms/zips/aaa.zip';  // Fichier ZIP dans le même répertoire que le dossier
 zipper($sourceDir, $zipFile);
+$path =  pathinfo($sourceDir,PATHINFO_BASENAME);
+var_dump($path);
+
+

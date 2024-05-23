@@ -14,6 +14,7 @@
         <a class="nav-a" href="../directories/semester_list.php">Semestres</a>
         <a class="nav-a" href="../week_timetable.php">Emploi du temps</a>
         <a class="nav-a" href="../about_the_class.php">la classe</a>
+        
     </div>
 </header>
 

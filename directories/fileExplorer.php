@@ -7,6 +7,7 @@ require '../data/timetable.php';
 require '../functions/metadata.php';
 $path = $_GET['target'];
 $title = get_folder_title($path);
+
 ?>
 <!doctype html>
 <head>
@@ -17,17 +18,22 @@ $title = get_folder_title($path);
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/container.css">
-    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/extensions.css">
     <script src="../js/header.js" defer ></script>
     <title><?= $title?$title: ''?> </title>
+
+
 </head>
 <html lang="fr">
-    <body>
+    
+    <body>  
     <?php require '../elements/header.php'; ?>
+    
    <div class="container">
        <div class="box">
-           <?php show_folder_content($path,'');?>
+           <?php show_folder_content($path,'');
+           ?>
+           <a href="/directories/downloads.php?target=<?=$path?>" class="downloader"> <img src="../images/download/download-minimalistic-svgrepo-com.svg    " alt=""></a>
        </div>
    </div>
     <?php require '../elements/footer.php'; ?>

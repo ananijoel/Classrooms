@@ -56,7 +56,7 @@ function get_folder_title($path)
 
 function zipper($source, $destination)
 {
-    shell_exec('sudo apt install php-zip');
+    //shell_exec('sudo apt install php-zip');
     $zip = new ZipArchive();
     $zip->open($destination, ZipArchive::CREATE);
     $source = realpath($source);
