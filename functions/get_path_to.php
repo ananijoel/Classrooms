@@ -54,6 +54,27 @@ function get_folder_title($path)
     return $a[count($a) - $i];
 }
 
+function zipper($source, $destination)
+{
+    shell_exec('sudo apt install php-zip');
+    $zip = new ZipArchive();
+    $zip->open($destination, ZipArchive::CREATE);
+    $source = realpath($source);
+
+    $iterator = new RecursiveDirectoryIterator($source, RecursiveDirectoryIterator::SKIP_DOTS);
+    $files = new RecursiveIteratorIterator($iterator, RecursiveIteratorIterator::SELF_FIRST);
+    foreach ($files as $file) {
+        $file = realpath($file);
+        if (is_dir($file)) {
+            $zip->addEmptyDir(str_replace($source . DIRECTORY_SEPARATOR, '', $file . DIRECTORY_SEPARATOR));
+        } else if (is_file($file)) {
+            $zip->addFromString(str_replace($source . DIRECTORY_SEPARATOR, '', $file), file_get_contents($file));
+        }
+    }
+
+    $zip->close();
+}
+
 /**
  * @param $path Array|string all the items you want to display
  * @param $target string the page you want to be redirected if the user clicked on an item
