@@ -164,3 +164,31 @@ function backbutton($path)
 
 
 }
+function fileDeleter($path){
+    $files =  get_directory_items($path);
+
+    foreach($files as $file){
+        try {
+            if (file_exists($file)) {
+                $creationDate = filemtime($file); // Récupère la date de modification du fichier
+                $currentDate = time(); // Timestamp actuel
+                $fileAge = $currentDate - $creationDate; // Age du fichier en seconde
+            
+                if ($fileAge > 3600) {
+                    if (unlink($file)) {
+                        echo "Le fichier a été supprimé avec succès.\n";
+                    } else {
+                        echo "Erreur : impossible de supprimer le fichier.\n";
+                    }
+                } else {
+                    echo "Le fichier est trop récent pour être supprimé.\n";
+                }
+            } else {
+                echo "Erreur : le fichier n'existe pas.\n";
+            }
+        } catch (Exception $e) {
+            echo "Une exception s'est produite : " . $e->getMessage();
+        }
+    }
+    
+}

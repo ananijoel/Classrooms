@@ -48,4 +48,7 @@ function get_projec_name()
 }
 echo get_projec_name();
 */
-phpinfo();
+//phpinfo();
+
+$path =  "/media/anani/Code base/Classrooms/zips";
+fileDeleter($path);
