@@ -1,5 +1,5 @@
 <?php
-require_once 'get_path_to.php';
+require_once 'explorer.php';
 function file_size($path)
 {
     $unit = "";

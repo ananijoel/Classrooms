@@ -54,26 +54,7 @@ function get_folder_title($path)
     return $a[count($a) - $i];
 }
 
-function zipper($source, $destination)
-{
-    //shell_exec('sudo apt install php-zip');
-    $zip = new ZipArchive();
-    $zip->open($destination, ZipArchive::CREATE);
-    $source = realpath($source);
 
-    $iterator = new RecursiveDirectoryIterator($source, RecursiveDirectoryIterator::SKIP_DOTS);
-    $files = new RecursiveIteratorIterator($iterator, RecursiveIteratorIterator::SELF_FIRST);
-    foreach ($files as $file) {
-        $file = realpath($file);
-        if (is_dir($file)) {
-            $zip->addEmptyDir(str_replace($source . DIRECTORY_SEPARATOR, '', $file . DIRECTORY_SEPARATOR));
-        } else if (is_file($file)) {
-            $zip->addFromString(str_replace($source . DIRECTORY_SEPARATOR, '', $file), file_get_contents($file));
-        }
-    }
-
-    $zip->close();
-}
 
 /**
  * @param $path Array|string all the items you want to display
@@ -92,7 +73,7 @@ function show_folder_content($path,$target)
         if (is_dir($item)) {
             echo ' <a  class="items" href="'.$target.'?target='.$item.'">
                         <div class="icon">
-                            <img src="../images/extensions/folder.svg" alt="">
+                            <img src="../Pictures/Extensions/folder.svg" alt="">
                         </div>
                         <div class="fileinfo">
                             <p class="filename">'.filename_limiter($item).'</p>
@@ -105,17 +86,10 @@ function show_folder_content($path,$target)
 
         }
         if (is_file($item)){
-            $itemRelativePath = get_relative_path($item) ;
-            //$file_info = pathinfo($itemRelativePath);
-            //$extension = $file_info['extension'];
-            //echo pathinfo($item, PATHINFO_EXTENSION);
-            //echo strlen($itemRelativePath);
-            //echo $item;
-            //echo strlen($itemRelativePath);
-            
+            $itemRelativePath = get_relative_path($item) ;    
             echo '<a  class="items" href="'. $itemRelativePath.'" download="'.pathinfo($item, PATHINFO_BASENAME).'" >
                         <div class="icon">
-                            <img src="../images/extensions/'.pathinfo($item, PATHINFO_EXTENSION).'.svg" alt="">
+                            <img src="../Pictures/Extensions/'.pathinfo($item, PATHINFO_EXTENSION).'.svg" alt="">
                         </div>
                         <div class="fileinfo">
                             <p class="filename">'.filename_limiter($item).'</p>

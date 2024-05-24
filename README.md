@@ -10,6 +10,51 @@ Pour tester le code, suivez ces étapes :
 2. Pour uploader des fichiers, saisissez directement dans la barre de recherche après l'adresse du site (`localhost:8000`) : `/upload.php`.
 3. Pour visualiser l'historique des uploads, accédez à : `uploads_history.php`.
 
+## Conventions de nommage
+
+### Dossiers
+
+- Utilisez des tirets (`-`) pour séparer les mots.
+- Évitez les espaces et les autres caractères spéciaux.
+- Gardez les noms courts et descriptifs.
+- Utilisez des minuscules.
+- Commencez les noms des dossiers par des majuscules
+- Exemples :
+    - `Mon-projet`
+    - `Outils-web`
+    - `Documents-financiers`
+
+### Fichiers
+
+- Utilisez des tirets (`_`) pour séparer les mots.
+- Évitez les espaces et les autres caractères spéciaux.
+- Utilisez des extensions de fichier minuscules.
+- Exemples :
+    - `liste_des_employés.csv`
+    - `rapport_trimestriel.pdf`
+    - `script_python.py`
+
+### Fonctions
+
+- Utilisez des tirets (`_`) pour séparer les mots.
+- Commencez par une minuscule.
+- Le reste des mots commence par une majuscule (camelCase).
+- Exemples :
+    - `fonction_nommer_fichier`
+    - `obtenir_donnees_utilisateur`
+    - `est_nombre_pair`
+
+### Variables
+
+- Utilisez des underscores (`-`) pour séparer les mots.
+- Commencez par une minuscule.
+- Évitez les espaces et les autres caractères spéciaux.
+- Exemples :
+    - `nom-utilisateur`
+    - `nombre-de-lignes`
+    - `est-valide`
+
+
 ## Utilisation
 Pour utiliser l'application, assurez-vous d'avoir lancé l'environnement de développement (le serveur PHP)
 ## Contribuer
