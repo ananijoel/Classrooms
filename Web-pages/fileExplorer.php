@@ -29,7 +29,7 @@ $title = get_folder_title($path);
        <div class="box">
            <?php show_folder_content($path,'');
            ?>
-           <a href="../Web-pages/download.php?target=<?=$path?>" class="downloader"> <img src="../Pictures/Download/download-minimalistic-svgrepo-com.svg    " alt=""></a>
+           <a href="../Web-pages/download.php?target=<?=$path?>" class="downloader"> <img src="../Pictures/Download-pic/download-minimalistic-svgrepo-com.svg    " alt=""></a>
        </div>
    </div>
    <?php require '../HTML-elemets/footer.php'; ?>
