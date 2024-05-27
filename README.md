@@ -73,7 +73,7 @@ Ce projet est sous licence MIT. Consultez le fichier [LICENCE](./LICENCE) pour p
 Pour toute question ou commentaire, n'hésitez pas à me contacter :
 - anatide ANANI 
 - Younous TCHAO
-- Email: ananijoellanatide.com
+- Email: ananijoellanatide@gmail.com
 
 ---
 
