@@ -14,7 +14,7 @@ navButton.addEventListener('click', () => {
                 a.classList.add('active');
             }, 500);
         });
-        navImage.src = '../images/header/navigation.svg';
+        navImage.src = '../Pictures/Header/navigation.svg';
         container.classList.add('active');
     } else {
         header.classList.remove('active');
@@ -24,7 +24,7 @@ navButton.addEventListener('click', () => {
                 a.classList.remove('active');
             }, 500 );
         });
-        navImage.src = '../images/header/compass.svg';
+        navImage.src = '../Pictures/Header/compass.svg';
         container.classList.remove('active');
     }
 });
