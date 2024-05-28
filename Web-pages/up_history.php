@@ -4,7 +4,7 @@ require '../Functions/explorer.php';
 require '../Functions/metadata.php';
 require '../Functions/download_functions.php';
 require '../Functions/agenda.php';
-$path = dirname(__FILE__).DIRECTORY_SEPARATOR.'upload';
+$path = dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'Upload';
 $title = 'Historique des uploads';
 ?>
 <!doctype html>

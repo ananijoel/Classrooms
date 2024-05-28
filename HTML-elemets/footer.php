@@ -1,5 +1,8 @@
 <footer>
     <div class="header-page-indicator">
-        <a  class="backbutton" href="<?= backbutton(isset($path)? $path: "")?>"> <?= $title?$title: ''?> </a>
+        <a  class="backbutton" href=""> <?= $title?$title: ''?> </a>
     </div>
 </footer>
+<?php 
+//backbutton(isset($path)? $path: "")
+?>
