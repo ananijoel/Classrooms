@@ -1,8 +1,6 @@
 <?php
 $title = 'upload';
-
 require '../Functions/upload_functions.php';
-
 require '../Functions/explorer.php';
 $message = uploader();
 ?>
