@@ -22,7 +22,7 @@ $title = 'acceuil';
 <?php require 'HTML-elemets/header.php'; ?>
 <div class="container">
     <div class="box">
-        <?php show_folder_content($path[1],'Web-pages/fileExplorer.php'); ?>
+        <?php show_folder_content($path[2],'Web-pages/fileExplorer.php'); ?>
     </div>
 </div>
 <?php require 'HTML-elemets/footer.php'; ?>
