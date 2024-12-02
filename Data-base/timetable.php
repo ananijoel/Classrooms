@@ -5,45 +5,48 @@ $lundi = [
     [$subjects[8], "700", "1000", "Pas de professeur"],
     ["Pause", "1000", "1030", "Pas de professeur"],
     [$subjects[0], "1030", "1230", ""],
-    ["Pause", "1300", "1400", "Pas de professeur"],
-    [$subjects[1], "1400", "1600", "Pas de professeur"],
-    [$subjects[1], "1600", "1800", "Pas de professeur"]
+    ["Pause", "1230", "1330", "Pas de professeur"],
+    [$subjects[1], "1330", "1530", "Dr BOYODI"],
+    ["Pause", "1530", "1600", "Pas de professeur"],
+    [$subjects[1], "1600", "1800", "Dr BOYODI"]
 ];
 
 $mardi = [
-    [$subjects[8], "730", "1030", "Dr PINDRA"],
-    ["Pause", "1030", "1100", "Pas de professeur"],
-    [$subjects[2], "1100", "1300", "Mr. ATADEGNON"],
-    ["Pause", "1300", "1400", "Pas de professeur"],
-    [$subjects[3], "1400", "1600", "Dr NATA"],
-    [$subjects[3], "1600", "1800", "Dr NATA"]
+    [$subjects[8], "700", "1000", "Pas de professeur"],
+    ["Pause", "1000", "1030", "Pas de professeur"],
+    [$subjects[2], "1030", "1230", "Mr. ATADEGNON"],
+    ["Pause", "1230", "1330", "Pas de professeur"],
+    [$subjects[3], "1330", "1530", "Mr SEWAVI"],
+    ["Pause", "1530", "1600", "Pas de professeur"],
+    [$subjects[3], "1600", "1800", "Mr SEWAVI"]
 ];
 
 $mercredi = [
-    [$subjects[4], "730", "1030", "Mr. AMUZUN"],
-    ["Pause", "1030", "1100", "Pas de professeur"],
-    [$subjects[8], "1100", "1300", "Dr. MALDJA"],
-    ["Pause", "1300", "1400", "Pas de professeur"],
-    [$subjects[5], "1400", "1600", "Dr. NATA"],
-    [$subjects[3], "1600", "1800", "Pas de professeur"]
+    [$subjects[4], "700", "1000", "Mr AMUZUN"],
+    ["Pause", "1000", "1030", "Pas de professeur"],
+    [$subjects[8], "1030", "1200", "Pas de professeur"],
+    [$subjects[5], "1200", "1500", "Mr ADJONYO"],
+    ["Pause", "1530", "1600", "Pas de professeur"],
+    [$subjects[3], "1600", "1800", "Mr SEWAVI"],
 ];
 
 $jeudi = [
-    [$subjects[4], "730", "1030", "Mr. Amevor"],
+    [$subjects[4], "700", "1000", "Mr AMUZUN"],
     ["Pause", "1030", "1100", "Pas de professeur"],
-    [$subjects[2], "1100", "1300", "Mr. AMUZUN"],
-    ["Pause", "1300", "1400", "Pas de professeur"],
-    [$subjects[2], "1400", "1600", "Mr. ATADEGNON"],
+    [$subjects[2], "1030", "1230", "Mr ATADEGNON"],
+    ["Pause", "1230", "1330", "Pas de professeur"],
+    [$subjects[2], "1330", "1530", "Mr. ATADEGNON"],
+    ["Pause", "1530", "1600", "Pas de professeur"],
     [$subjects[8], "1600", "1800", "Pas de professeur"]
 ];
 
 $vendredi = [
-    [$subjects[7], "730", "1030", "Dr. PINDRA"],
-    ["Pause", "1030", "1100", "Pas de professeur"],
-    [$subjects[7], "1100", "1300", "Mr. ATADEGNON"],
-    ["Pause", "1300", "1400", "Pas de professeur"],
-    [$subjects[8], "1400", "1600", "Dr. PINDRA"],
-    [$subjects[8], "1600", "1800", "Dr. PINDRA"]
+    [$subjects[7], "700", "1000", "Dr. PINDRA"],
+    ["Pause", "1000", "1030", "Pas de professeur"],
+    [$subjects[7], "1030", "1200", "Dr. PINDRA"],
+    ["Pause", "1230", "1330", "Pas de professeur"],
+    [$subjects[8], "1400", "1600", "Pas de professeur"],
+    [$subjects[8], "1600", "1800", "Pas de professeur"]
 ];
 
 $time_table = ['Mon' => $lundi, 'Tue' => $mardi, 'Wed' => $mercredi, 'Thu' => $jeudi, 'Fri' => $vendredi];
